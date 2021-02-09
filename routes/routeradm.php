@@ -3,24 +3,14 @@
 use App\Http\Controllers\adm\AdmController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-    Route::prefix("adm")->group(function(){
+/* Grupos de Rotas a área Administrativa */
+Route::prefix('/adm')->group(function () {
         Route::get("/",[
             AdmController::class,"index"
-        ])->namespace("index.adm");
+        ])->name("index.adm");
         
         Route::get("/addnoticias",[
             AdmController::class,"addnoticias"
-        ])->namespace("addnoticias.adm");
+        ])->name("addnoticias.adm");
     
     });

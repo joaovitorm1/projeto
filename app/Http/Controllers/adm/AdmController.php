@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\adm;
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
